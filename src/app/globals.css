@@ -1,6 +1,40 @@
 @import "tailwindcss";
 
+* {
+  font-family: "Satoshi", sans-serif;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.otf") format("openType");
+}
+
+@font-face {
+  font-family: "IntegralBold";
+  src: url("/assets/fonts/IntegralBold.otf") format("openType");
+}
+
+@font-face {
+  font-family: "Integral";
+  src: url("/assets/fonts/Integral.otf") format("openType");
+}
+
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --breakpoint-lg: 1025px;
+  --breakpoint-md: 770px;
+  --font-integral: "Integral", sans-serif;
+  --font-integralBold: "IntegralBold", sans-serif;
+  --color-lightGray: rgba(240, 240, 240, 1);
+  --color-customGray: rgba(0, 0, 0, 0.6);
+  --color-customLightGray: rgba(0, 0, 0, 0.1);
+  --color-fade: rgba(240, 238, 237, 1);
+  --color-lightRed: rgba(255, 51, 51, 0.1);
+  --color-customRed: rgba(255, 51, 51, 1);
+}
+
+select {
+  background-image: url("/assets/svg/drop-down.svg") !important;
+  background-position: right 0px top 50%;
+  background-size: 11px auto;
+  background-repeat: no-repeat;
 }
