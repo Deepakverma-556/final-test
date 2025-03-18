@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Heading from "./common/Heading";
 import { Autoplay, Pagination } from "swiper/modules";
-import { NEW_ARRIVALS_LIST } from "@/utils/helper";
+import { TOP_SELLING_LIST } from "@/utils/helper";
 import Image, { StaticImageData } from "next/image";
 import CustomButton from "./common/CustomButton";
 
@@ -18,10 +18,10 @@ interface MyProps {
   discountPrice: string;
   discount?: string;
 }
-const NewArrivals = () => {
+const TopSelling = () => {
   return (
-    <div className="pt-[72px] pb-16 max-md:pt-[50px] max-md:pb-10">
-      <Heading text="NEW ARRIVALS" myClass="mb-[55px] max-md:mb-8" />
+    <div className="pb-20 max-md:pb-[50px]">
+      <Heading text="top selling" myClass="mb-[55px] max-md:mb-8" />
       <div className="ml-4">
         <Swiper
           pagination={{
@@ -45,7 +45,7 @@ const NewArrivals = () => {
             },
           }}
         >
-          {NEW_ARRIVALS_LIST.map((obj: MyProps, i: number) => (
+          {TOP_SELLING_LIST.map((obj: MyProps, i: number) => (
             <SwiperSlide key={i} className="max-lg:pb-16 max-sm:pb-12">
               <div className="bg-fade rounded-[20px] flex items-center justify-center px-[38px] py-[34px] max-sm:px-8 max-sm:py-6">
                 <Image
@@ -61,7 +61,7 @@ const NewArrivals = () => {
                 <Image
                   src={obj.ratingStar}
                   alt={obj.ratingAlt}
-                  className="h-[18.49px] pointer-events-none max-w-max max-sm:h-[15.47px]"
+                  className="h-[18.49px] max-w-max max-sm:h-[15.47px] pointer-events-none"
                 />
                 <p className="text-sm max-sm:text-xs leading-[100%]">
                   {obj.rating}
@@ -77,7 +77,7 @@ const NewArrivals = () => {
                 </p>
                 <p
                   className={`${
-                    i === 0 ? "hidden" : i === 2 ? "hidden" : ""
+                    i === 0 ? "" : "hidden"
                   } rounded-full py-[6px] px-[13.5px] bg-lightRed text-customRed font-medium text-xs max-sm:text-[10px] max-sm:px-2 max-sm:py-[3px] leading-[100%]`}
                 >
                   {obj.discount}
@@ -92,10 +92,9 @@ const NewArrivals = () => {
           text="View All"
           myClass="!text-black !bg-transparent !border-customLightGray !mx-auto flex px-[80.44px] py-[17.2px] max-sm:py-[14.2px] hover:!bg-black hover:!text-white mt-9 max-md:mt-2 max-sm:w-full flex justify-center"
         />
-        <div className="max-w-[1240px] border-t border-customLightGray mx-auto mt-16 max-md:mt-10"></div>
       </div>
     </div>
   );
 };
 
-export default NewArrivals;
+export default TopSelling;

@@ -19,15 +19,18 @@ function Header() {
         <div className="max-w-[1272px] mx-auto px-4 relative">
           <p className="text-sm max-sm:text-xs font-normal leading-[100%] text-white text-center">
             Sign up and get 20% off to your first order.{" "}
-            <Link href={"/"} className="underline font-medium">
+            <Link
+              href={"/"}
+              className="underline font-medium transition-all duration-300 hover:text-gray-500"
+            >
               Sign Up Now
             </Link>
           </p>
           <button
             onClick={() => setRemove(true)}
-            className="absolute max-sm:hidden right-4 top-0 cursor-pointer"
+            className="absolute max-sm:hidden right-4 top-0 cursor-pointer group"
           >
-            <Cross />
+            <Cross myClass="transition-all duration-300 group-hover:fill-gray-500" />
           </button>
         </div>
       </div>
@@ -76,7 +79,12 @@ function Header() {
           {HEADER_LIST.map((obj, i) => (
             <ul key={i} className="flex items-center">
               <li>
-                <Link href={obj.link}>{obj.title}</Link>
+                <Link
+                  href={obj.link}
+                  className="relative after:absolute after:h-[0.5px] after:w-0 after:bg-black after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {obj.title}
+                </Link>
               </li>
             </ul>
           ))}
