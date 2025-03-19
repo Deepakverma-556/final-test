@@ -30,6 +30,7 @@
   --color-fade: rgba(240, 238, 237, 1);
   --color-lightRed: rgba(255, 51, 51, 0.1);
   --color-customRed: rgba(255, 51, 51, 1);
+  --color-customLight: rgba(214, 220, 229, 1);
 }
 
 select {

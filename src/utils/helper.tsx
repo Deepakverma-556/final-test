@@ -16,6 +16,12 @@ import threeAndHalfStar from "../../public/assets/images/png/3.5-star.png";
 import fiveStar from "../../public/assets/images/png/5-star.png";
 import fourStar from "../../public/assets/images/png/4-star.png";
 import threeStar from "../../public/assets/images/png/3-star.png";
+import visa from "../../public/assets/images/png/visa.png";
+import masterCard from "../../public/assets/images/png/master-card.png";
+import paypal from "../../public/assets/images/png/paypal.png";
+import pay from "../../public/assets/images/png/pay.png";
+import gpay from "../../public/assets/images/png/g-pay.png";
+import { Facebook, Github, Insta, Twitter } from "./icons";
 
 export const HEADER_DROP_DOWN_LIST = [
   {
@@ -164,5 +170,86 @@ export const TOP_SELLING_LIST = [
     ratingAlt: "4.5-star",
     rating: "4.5/",
     discountPrice: "$210",
+  },
+];
+
+export const FOOTER_SOCIAL_ICON_LIST = [
+  {
+    icon: <Twitter myClass="group-hover:fill-white" />,
+    link: "https://x.com/?lang=en",
+  },
+  {
+    icon: <Facebook myClass="group-hover:fill-white" />,
+    link: "https://x.com/?lang=en",
+  },
+  {
+    icon: <Insta myClass="group-hover:fill-white" />,
+    link: "https://x.com/?lang=en",
+  },
+  {
+    icon: <Github myClass="group-hover:fill-white" />,
+    link: "https://x.com/?lang=en",
+  },
+];
+
+export const FOOTER_LIST = [
+  {
+    title: "COMPANY",
+    list: [
+      { title: "About", link: "#about" },
+      { title: "Features", link: "#features" },
+      { title: "Works", link: "#works" },
+      { title: "Career", link: "#career" },
+    ],
+  },
+  {
+    title: "HELP",
+    list: [
+      { title: "Customer Support", link: "#customer-support" },
+      { title: "Delivery Details", link: "#delivery-details" },
+      { title: "Terms & Conditions", link: "#terms-conditions" },
+      { title: "Privacy Policy", link: "#privacy-policy" },
+    ],
+  },
+  {
+    title: "FAQ",
+    list: [
+      { title: "Account", link: "#about" },
+      { title: "Manage Deliveries", link: "#manage-deliveries" },
+      { title: "Orders", link: "#orders" },
+      { title: "Payments", link: "#payments" },
+    ],
+  },
+  {
+    title: "RESOURCES",
+    list: [
+      { title: "Free eBooks", link: "#free-ebooks" },
+      { title: "Development Tutorial", link: "#development-tutorial" },
+      { title: "How to - Blog", link: "#how-to-blog" },
+      { title: "Youtube Playlist", link: "#youtube-playlist" },
+    ],
+  },
+];
+
+export const PAYMENTS_MODE_LIST = [
+  {
+    image: visa,
+    link: "https://www.visa.co.in/",
+  },
+  {
+    image: masterCard,
+    link: "https://www.visa .co.in/",
+  },
+  {
+    image: paypal,
+    link: "https://www.paypal.co.in/",
+  },
+  {
+    image: pay,
+    link: "https://www.pay.co.in/",
+  },
+  {
+    image: gpay,
+    link: "https://www.googlepay.co.in/",
   },
 ];
