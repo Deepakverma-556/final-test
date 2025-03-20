@@ -3,7 +3,7 @@ import { DETAILS_TABS_LIST } from "@/utils/helper";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
-import UserReview from "../common/UserReview";
+import ReviewsData from "../common/ReviewsData";
 
 const Review = () => {
   const searchParams = useSearchParams();
@@ -41,7 +41,7 @@ const Review = () => {
       </div>
 
       {tab === "rating-and-reviews" ? (
-        <UserReview />
+        <ReviewsData />
       ) : (
         <div className="mt-4">
           <h2 className="text-lg text-center font-bold">Comming soon</h2>

@@ -1,12 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import Heading from "./common/Heading";
 import { Autoplay, Pagination } from "swiper/modules";
-import { TOP_SELLING_LIST } from "@/utils/helper";
+import { ALSO_LIKE_LIST } from "@/utils/helper";
 import Image, { StaticImageData } from "next/image";
-import CustomButton from "./common/CustomButton";
-import Link from "next/link";
+import Heading from "../common/Heading";
 
 interface MyProps {
   image: StaticImageData;
@@ -19,10 +17,10 @@ interface MyProps {
   discountPrice: string;
   discount?: string;
 }
-const TopSelling = () => {
+const AlsoLike = () => {
   return (
-    <div className="pb-20 max-md:pb-[50px]">
-      <Heading text="top selling" myClass="mb-[55px] max-md:mb-8" />
+    <div className="pt-[72px] pb-[168px] max-md:pt-[50px] max-md:pb-[185px]">
+      <Heading text="NEW ARRIVALS" myClass="mb-[55px] max-md:mb-8" />
       <div className="ml-4">
         <Swiper
           pagination={{
@@ -46,14 +44,8 @@ const TopSelling = () => {
             },
           }}
         >
-          {TOP_SELLING_LIST.map((obj: MyProps, i: number) => (
+          {ALSO_LIKE_LIST.map((obj: MyProps, i: number) => (
             <SwiperSlide key={i} className="max-lg:pb-16 max-sm:pb-12">
-              <Link
-                href={`/product/${obj.title
-                  .toLowerCase()
-                  .split(" ")
-                  .join("-")}`}
-              >
                 <div className="bg-fade rounded-[20px] flex items-center justify-center px-[38px] py-[34px] max-sm:px-8 max-sm:py-6">
                   <Image
                     src={obj.image}
@@ -68,7 +60,7 @@ const TopSelling = () => {
                   <Image
                     src={obj.ratingStar}
                     alt={obj.ratingAlt}
-                    className="h-[18.49px] max-w-max max-sm:h-[15.47px] pointer-events-none"
+                    className="h-[18.49px] pointer-events-none max-w-max max-sm:h-[15.47px]"
                   />
                   <p className="text-sm max-sm:text-xs leading-[100%]">
                     {obj.rating}
@@ -84,25 +76,18 @@ const TopSelling = () => {
                   </p>
                   <p
                     className={`${
-                      i === 0 ? "" : "hidden"
+                      i === 1 ? "hidden" : i === 2 ? "hidden" : ""
                     } rounded-full py-[6px] px-[13.5px] bg-lightRed text-customRed font-medium text-xs max-sm:text-[10px] max-sm:px-2 max-sm:py-[3px] leading-[100%]`}
                   >
                     {obj.discount}
                   </p>
                 </div>
-              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div className="max-sm:px-4">
-        <CustomButton
-          text="View All"
-          myClass="!text-black !bg-transparent !border-customLightGray !mx-auto flex px-[80.44px] py-[17.2px] max-sm:py-[14.2px] hover:!bg-black hover:!text-white mt-9 max-md:mt-2 max-sm:w-full flex justify-center"
-        />
       </div>
     </div>
   );
 };
 
-export default TopSelling;
+export default AlsoLike;

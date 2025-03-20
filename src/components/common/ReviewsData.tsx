@@ -1,9 +1,8 @@
+import React, { useState } from "react";
 import { Dots, GreenMark } from "@/utils/icons";
 import CustomButton from "./CustomButton";
 import { USER_REVIEWS_LIST } from "@/utils/helper";
 import Description from "./Description";
-import { useState } from "react";
-import Image from "next/image";
 
 const ReviewsData = () => {
   const [sortOption, setSortOption] = useState("Oldest");
@@ -24,7 +23,7 @@ const ReviewsData = () => {
   };
 
   return (
-    <div className="pt-8 pb-16 max-md:pb-[50px] max-md:pt-6">
+    <div className="pt-8 max-md:pt-6">
       <div className="max-w-[1272px] px-4 mx-auto">
         <div className="flex w-full items-center justify-between">
           <div className="flex gap-2 items-center justify-center">
@@ -38,7 +37,7 @@ const ReviewsData = () => {
           <select
             onChange={handleSortChange}
             value={sortOption}
-            className="cursor-pointer text-medium text-base max-md:text-sm leading-[100%] outline-none bg-custom-gray rounded-[62px] font-medium py-[13px] px-5"
+            className="cursor-pointer text-medium text-base max-md:text-sm leading-[100%] outline-none bg-custom-gray rounded-[62px] font-medium py-[13px] px-5 appearance-none"
           >
             <option className="text-medium text-base leading-[100%] max-md:text-sm">
               Oldest
@@ -55,7 +54,7 @@ const ReviewsData = () => {
               className="w-[49.19%] max-lg:w-full border border-black/10 rounded-[20px] py-7 px-8 max-sm:p-6 max-lg:px-7"
             >
               <div className="flex w-full justify-between items-center">
-                <Image src={item.rating} alt="rating"/>
+                <span>{item.rating}</span>
                 <span className="cursor-pointer flex">
                   <Dots />
                 </span>
@@ -79,7 +78,7 @@ const ReviewsData = () => {
         </div>
         <div className="flex justify-center items-center pt-[36.42px] max-md:pt-5">
           <CustomButton
-            myClass="w-[230px] h-[52px] max-md:w-[195px] max-md:h-[47px] text-base max-md:text-sm border-black/10 hover:bg-black hover:text-white"
+            myClass="w-[230px] h-[52px] max-md:w-[195px] max-md:h-[47px] !text-black !bg-transparent text-base max-md:text-sm border-black/10 hover:!bg-black hover:!text-white"
             text="Load More Reviews"
           />
         </div>

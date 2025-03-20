@@ -21,7 +21,12 @@ import masterCard from "../../public/assets/images/png/master-card.png";
 import paypal from "../../public/assets/images/png/paypal.png";
 import pay from "../../public/assets/images/png/pay.png";
 import gpay from "../../public/assets/images/png/g-pay.png";
-import { Facebook, Github, Insta, Twitter } from "./icons";
+import polo from "../../public/assets/images/png/polo.png"
+import gradient from "../../public/assets/images/png/gradient.png"
+import poloTipping from "../../public/assets/images/png/polo-tipping.png"
+import black from "../../public/assets/images/png/black.png"
+
+import { Facebook, FiveStarIcon, FourHalfStarIcon, FourStarIcon, Github, GreenMark, Insta, ThreeHalfStarIcon, Twitter } from "./icons";
 
 export const HEADER_DROP_DOWN_LIST = [
   {
@@ -262,42 +267,42 @@ export const DETAILS_TABS_LIST = [
 
 export const USER_REVIEWS_LIST = [
   {
-    rating: fourAndHalfStar,
+    rating: <FourHalfStarIcon/>,
     userName: "Samantha D.",
     description:
       "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
     uploadDate: "Posted on August 14, 2023",
   },
   {
-    rating: fourStar,
+    rating: <FourStarIcon/>,
     userName: "Alex M.",
     description:
       "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.",
     uploadDate: "Posted on August 15, 2023",
   },
   {
-    rating: threeAndHalfStar,
+    rating: <ThreeHalfStarIcon/>,
     userName: "Ethan R.",
     description:
       "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
     uploadDate: "Posted on August 16, 2023",
   },
   {
-    rating: fourStar,
+    rating: <FourStarIcon/>,
     userName: "Olivia P.",
     description:
       "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
     uploadDate: "Posted on August 17, 2023",
   },
   {
-    rating: fourStar,
+    rating: <FourStarIcon/>,
     userName: "Liam K.",
     description:
       "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
     uploadDate: "Posted on August 18, 2023",
   },
   {
-    rating: fourAndHalfStar,
+    rating: <FourHalfStarIcon/>,
     userName: "Ava H.",
     description:
       "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
@@ -311,41 +316,88 @@ export const SIZE_LIST = ["Small", "Medium", "Large", "X-Large"];
 
 export const ALSO_LIKE_LIST = [
   {
-    image: stripedShirt,
-    imgAlt: "striped-shirt",
-    title: "Vertical Striped Shirt",
-    ratingStar: fiveStar,
-    ratingAlt: "5-star",
-    rating: "5.0/",
-    discountPrice: "$212",
-    price: "$232",
-    discount: "-20%",
-  },
-  {
-    image: graphicTShirt,
-    imgAlt: "graphic-t-shirt",
-    title: "Courage Graphic T-shirt",
+    image: polo,
+    imgAlt: "polo",
+    title: "Polo with Contrast Trims",
     ratingStar: fourStar,
     ratingAlt: "4-star",
     rating: "4.0/",
+    discountPrice: "$212",
+    price: "$242",
+    discount: "-20%",
+  },
+  {
+    image: gradient,
+    imgAlt: "gradient",
+    title: "Gradient Graphic T-shirt",
+    ratingStar: threeAndHalfStar,
+    ratingAlt: "3.5-star",
+    rating: "3.5/",
     discountPrice: "$145",
   },
   {
-    image: shorts,
-    imgAlt: "shorts",
-    title: "Loose Fit Bermuda Shorts",
-    ratingStar: threeStar,
-    ratingAlt: "3-star",
-    rating: "3.0/",
-    discountPrice: "$80",
-  },
-  {
-    image: skinnyJeans,
-    imgAlt: "skinny-jeans",
-    title: "Faded Skinny Jeans",
+    image: poloTipping,
+    imgAlt: "polo=tipping",
+    title: "Polo with Tipping Details",
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$210",
+    discountPrice: "$180",
+  },
+  {
+    image: black,
+    imgAlt: "black",
+    title: "Black Striped T-shirt",
+    ratingStar: fiveStar,
+    ratingAlt: "5-star",
+    rating: "5.0/",
+    discountPrice: "$120",
+    price: "$150",
+    discount: "-30%",
+  },
+];
+
+export const HAPPY_CUSTOMERS_LIST = [
+  {
+    rating: <FiveStarIcon />,
+    name: "Sarah M.",
+    icon: <GreenMark />,
+    description:
+      "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
+  },
+  {
+    rating: <FiveStarIcon />,
+    name: "Alex K.",
+    icon: <GreenMark />,
+    description:
+      "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”",
+  },
+  {
+    rating: <FiveStarIcon />,
+    name: "James L.",
+    icon: <GreenMark />,
+    description:
+      "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
+  },
+  {
+    rating: <FiveStarIcon />,
+    name: "Sarah M.",
+    icon: <GreenMark />,
+    description:
+      "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”",
+  },
+  {
+    rating: <FiveStarIcon />,
+    name: "Alex K.",
+    icon: <GreenMark />,
+    description:
+      "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”",
+  },
+  {
+    rating: <FiveStarIcon />,
+    name: "James L.",
+    icon: <GreenMark />,
+    description:
+      "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
   },
 ];

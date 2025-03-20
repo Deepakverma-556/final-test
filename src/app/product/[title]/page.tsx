@@ -1,10 +1,13 @@
+"use client"
 import Review from "@/components/details/Review";
-import Overview from "@/components/details/Overview";
+import AlsoLike from "@/components/details/AlsoLike";
+import ProductOverview from "@/components/details/ProductOverview";
 const page = () => {
   return (
     <div>
-      <Review/>
-      <Overview />
+      <ProductOverview/>
+      <Review />
+      <AlsoLike />
     </div>
   );
 };
