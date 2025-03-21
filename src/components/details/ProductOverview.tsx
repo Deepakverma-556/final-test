@@ -17,7 +17,7 @@ import Image, { StaticImageData } from "next/image";
 
 type CartItem = {
   title: string;
-  price: string;
+  price: number;
   image: string | StaticImageData;
   selectedColor: string;
   selectedSize: string;
@@ -58,7 +58,7 @@ const ProductOverview = () => {
 
     const selectedProduct: CartItem = {
       title: product.title,
-      price: product.price,
+      price: product.price ?? 0,
       image: product.image,
       selectedColor: COLOR_LIST[activeColor],
       selectedSize: SIZE_LIST[activeSize],
