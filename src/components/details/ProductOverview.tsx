@@ -120,7 +120,7 @@ const ProductOverview = () => {
       <div className="flex gap-10 max-lg:gap-6 max-[1025px]:flex-col max-lg:items-stretch max-xl:items-center">
         <ImageShow product={product} />
         <div className="lg:max-w-[600px] w-full flex flex-col">
-          <p className="font-integral font-bold text-[40px] max-lg:text-3xl max-md:text-2xl max-md:leading-7 pb-3.5 max-md:pb-3 leading-[100%]">
+          <p className="!font-integralBold text-[40px] max-lg:text-3xl max-md:text-2xl max-md:leading-7 pb-3.5 max-md:pb-3 leading-[100%]">
             {product.title}
           </p>
           <div className="flex gap-4">

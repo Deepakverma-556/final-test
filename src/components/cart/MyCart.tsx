@@ -71,7 +71,7 @@ const Cart = () => {
             Cart
           </Link>
         </div>
-        <h1 className="max-md:text-3xl text-[40px] font-integral font-bold pb-6 max-lg:pb-5">
+        <h1 className="max-md:text-3xl text-[40px] !font-integralBold pb-6 max-lg:pb-5">
           Your Cart
         </h1>
         {cartItems.length === 0 ? (
