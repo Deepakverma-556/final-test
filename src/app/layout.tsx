@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     description: "FIND CLOTHES THAT MATCHES YOUR STYLE",
     images: [
       {
+        url: "/meta-img.png",
         width: 800,
         height: 600,
-        url: "./meta-img.png",
         alt: "meta-img",
       },
     ],
