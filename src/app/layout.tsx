@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       {
         width: 800,
         height: 600,
-        url: "/meta-img.png",
+        url: "./meta-img.png",
         alt: "meta-img",
       },
     ],
