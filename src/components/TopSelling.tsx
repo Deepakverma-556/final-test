@@ -15,8 +15,8 @@ interface MyProps {
   ratingStar: StaticImageData;
   ratingAlt: string;
   rating: string;
-  price?: string;
-  discountPrice: string;
+  price?: number;
+  discountPrice: number;
   discount?: string;
 }
 const TopSelling = () => {
@@ -77,10 +77,10 @@ const TopSelling = () => {
                 </div>
                 <div className="flex items-center gap-2.5 pt-2">
                   <p className="font-bold text-2xl max-md:text-xl leading-[100%]">
-                    {obj.discountPrice}
+                    ${obj.discountPrice}
                   </p>
                   <p className="font-bold text-2xl max-md:text-xl leading-[100%] text-customGray">
-                    {obj.price}
+                    {i === 0 ? `$${obj.price}` : ``}
                   </p>
                   <p
                     className={`${

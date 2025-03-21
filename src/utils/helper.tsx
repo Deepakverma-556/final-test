@@ -102,7 +102,7 @@ export const NEW_ARRIVALS_LIST = [
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$120",
+    discountPrice: 120,
   },
   {
     image: skinnyFit,
@@ -111,8 +111,8 @@ export const NEW_ARRIVALS_LIST = [
     ratingStar: threeAndHalfStar,
     ratingAlt: "3.5-star",
     rating: "3.5/",
-    discountPrice: "$240",
-    price: "$260",
+    discountPrice: 240,
+    price: 260,
     discount: "-20%",
   },
   {
@@ -122,7 +122,7 @@ export const NEW_ARRIVALS_LIST = [
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$180",
+    discountPrice: 180,
   },
   {
     image: stripedTShirt,
@@ -131,8 +131,8 @@ export const NEW_ARRIVALS_LIST = [
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$130",
-    price: "$160",
+    discountPrice: 130,
+    price: 160,
     discount: "-30%",
   },
 ];
@@ -145,8 +145,8 @@ export const TOP_SELLING_LIST = [
     ratingStar: fiveStar,
     ratingAlt: "5-star",
     rating: "5.0/",
-    discountPrice: "$212",
-    price: "$232",
+    discountPrice: 212,
+    price: 232,
     discount: "-20%",
   },
   {
@@ -156,7 +156,7 @@ export const TOP_SELLING_LIST = [
     ratingStar: fourStar,
     ratingAlt: "4-star",
     rating: "4.0/",
-    discountPrice: "$145",
+    discountPrice: 145,
   },
   {
     image: shorts,
@@ -165,7 +165,7 @@ export const TOP_SELLING_LIST = [
     ratingStar: threeStar,
     ratingAlt: "3-star",
     rating: "3.0/",
-    discountPrice: "$80",
+    discountPrice: 80,
   },
   {
     image: skinnyJeans,
@@ -174,7 +174,7 @@ export const TOP_SELLING_LIST = [
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$210",
+    discountPrice: 210,
   },
 ];
 
@@ -322,8 +322,8 @@ export const ALSO_LIKE_LIST = [
     ratingStar: fourStar,
     ratingAlt: "4-star",
     rating: "4.0/",
-    discountPrice: "$212",
-    price: "$242",
+    discountPrice: 212,
+    price: 242,
     discount: "-20%",
   },
   {
@@ -333,7 +333,7 @@ export const ALSO_LIKE_LIST = [
     ratingStar: threeAndHalfStar,
     ratingAlt: "3.5-star",
     rating: "3.5/",
-    discountPrice: "$145",
+    discountPrice: 145,
   },
   {
     image: poloTipping,
@@ -342,7 +342,7 @@ export const ALSO_LIKE_LIST = [
     ratingStar: fourAndHalfStar,
     ratingAlt: "4.5-star",
     rating: "4.5/",
-    discountPrice: "$180",
+    discountPrice: 180,
   },
   {
     image: black,
@@ -351,8 +351,8 @@ export const ALSO_LIKE_LIST = [
     ratingStar: fiveStar,
     ratingAlt: "5-star",
     rating: "5.0/",
-    discountPrice: "$120",
-    price: "$150",
+    discountPrice: 120,
+    price: 150,
     discount: "-30%",
   },
 ];

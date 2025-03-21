@@ -7,6 +7,15 @@ import { useEffect, useState } from "react";
 function Header() {
   const [remove, setRemove] = useState(false);
   const [open, setOpen] = useState(false);
+  const [cartLength, setCartLength] = useState(0);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      const cart = JSON.parse(storedCart);
+      setCartLength(cart.length);
+    }
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
@@ -107,9 +116,12 @@ function Header() {
           <button className="cursor-pointer md:hidden">
             <SearchIcon myClass="fillOpacity-100" />
           </button>
-          <button className="cursor-pointer">
+          <Link href={"/cart"} className="relative">
             <Cart />
-          </button>
+            <span className=" absolute -top-5 -right-2.5 bg-customRed rounded-full size-6 items-center justify-center flex text-sm text-white">
+              {cartLength}
+            </span>
+          </Link>
         </div>
         <div
           className={`w-full h-full bg-white transition-all duration-500 left-0 md:-top-full z-40 fixed flex justify-center items-center ${

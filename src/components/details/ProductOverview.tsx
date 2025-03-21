@@ -119,7 +119,7 @@ const ProductOverview = () => {
       </div>
       <div className="flex gap-10 max-lg:gap-6 max-[1025px]:flex-col max-lg:items-stretch max-xl:items-center">
         <ImageShow product={product} />
-        <div className="max-w-[600px] w-full flex flex-col">
+        <div className="lg:max-w-[600px] w-full flex flex-col">
           <p className="font-integral font-bold text-[40px] max-lg:text-3xl max-md:text-2xl max-md:leading-7 pb-3.5 max-md:pb-3 leading-[100%]">
             {product.title}
           </p>
@@ -132,11 +132,11 @@ const ProductOverview = () => {
           </div>
           <div className="flex items-center gap-3 max-md:gap-2.5 pt-[14.29px] max-md:pt-3">
             <p className="font-bold text-[32px] max-md:text-2xl leading-[100%]">
-              {product.discountPrice}
+              ${product.discountPrice}
             </p>
             <span className="w-max relative">
               <p className="relative text-black/30 text-[32px] max-md:text-2xl font-bold">
-                {product.price}
+                ${product.price}
               </p>
             </span>
             {product.discount && (
@@ -149,7 +149,7 @@ const ProductOverview = () => {
             This graphic t-shirt which is perfect for any occasion. Crafted from
             a soft and breathable fabric, it offers superior comfort and style.
           </p>
-          <div className="max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
+          <div className="lg:max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
           <p className="text-black/60 max-md:text-sm">Select Colors</p>
           <div className="flex gap-4 mt-4">
             {COLOR_LIST.map((color, index) => (
@@ -162,7 +162,7 @@ const ProductOverview = () => {
               </button>
             ))}
           </div>
-          <div className="max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
+          <div className="lg:max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
           <p className="text-black/60 max-md:text-sm">Choose Size</p>
           <div className="flex gap-3 max-sm:gap-2 mt-4">
             {SIZE_LIST.map((size, index) => (
@@ -177,7 +177,7 @@ const ProductOverview = () => {
               </button>
             ))}
           </div>
-          <div className="max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
+          <div className="lg:max-w-[590px] w-full bg-black/10 h-[1px] my-6"></div>
           <div className="flex items-center gap-5">
             <div className="flex items-center bg-custom-gray justify-between rounded-[62px] py-3.5 px-5 max-md:py-3 max-md:px-4 w-full max-w-[110px] md:max-w-[170px] ">
               <button
